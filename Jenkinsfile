@@ -18,7 +18,7 @@ pipeline {
                 sh 'terraform init'
             }
         }
-        stage('validate') {
+        /*stage('validate') {
             steps {
                 sh 'terraform validate'
           }
@@ -32,12 +32,12 @@ pipeline {
             steps {
                 sh 'terraform apply --auto-approve'
         }
-      }
-        /*stage('destroy') {
+      }*/
+        stage('destroy') {
             steps {
                 sh 'terraform destroy --auto-approve'
         }
-      }*/
+      }
 
 }
 }
